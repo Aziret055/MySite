@@ -1,0 +1,9 @@
+.dott{
+    width: 575px;
+height: 575px;
+flex-shrink: 0;
+border-radius: 575px;
+border: 60px solid var(--blu, #00C4F0);
+box-shadow: 0px 0px 152px 0px rgba(0, 225, 255, 0.72);
+
+}
