@@ -1,13 +1,17 @@
-@import "./components/Hero/style.css";
-@import "./components/Blocks/style.css";
-@import "./components/About/style.css";
+@import './components/Hero/style.css';
+@import './components/Blocks/style.css';
+@import './components/About/style.css';
 
-*{
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
 }
 .container {
-  width: 80%;
-  margin: 0 auto;
+	width: 80%;
+	margin: 0 auto;
+}
+a {
+	text-decoration: none;
+	cursor: pointer;
 }

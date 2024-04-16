@@ -1,93 +1,111 @@
 import gsap from 'gsap'
 import React from 'react'
-
 const Footer = () => {
 	function func() {
 		gsap.to(window, {
 			scrollTo: { y: '#about' },
+
 			ease: 'expo',
 			duration: 2
 		})
 	}
+	function heroFunction() {
+		gsap.to(window, {
+			scrollTo: { y: '#portfolio' },
+
+			ease: 'expo',
+			duration: 2
+		})
+	}
+
 	return (
 		<div id='contact' className='container'>
 			<div className='my-[100px]'>
-				<footer className='bg-white dark:bg-gray-900'>
-					<div className='mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8'>
+				<footer className='text-white dark:bg-gray-900'>
+					<div className='mx-auto w-full  p-4 py-6 lg:py-8'>
 						<div className='md:flex md:justify-between'>
-							<div className='mb-6 md:mb-0'>
-								<a href='https://flowbite.com/' className='flex items-center'>
-									<img
-										src='https://flowbite.com/docs/images/logo.svg'
-										className='h-8 me-3'
-										alt='FlowBite Logo'
-									/>
-									<span className='self-center text-2xl font-semibold whitespace-nowrap dark:text-white'>
-										Flowbite
-									</span>
-								</a>
-							</div>
-							<div className='grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3'>
-								<div>
-									<h2 className='mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white'>
-										Home
-									</h2>
-									<ul className='text-gray-500 dark:text-gray-400 font-medium'>
-										<li onClick={func} className='mb-4'>
-											About me
-										</li>
-										<li>
-											<a href='#' className='hover:underline'>
+							<div className='mb-11 '>
+								<span className='self-center text-2xl font-semibold whitespace-nowrap text-white'>
+									Contact
+								</span>
+
+								<div className='grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3'>
+									<div>
+										<ul className='text-white dark:text-gray-400 flex flex-col font-medium'>
+											<a className='mb-4 mt-11'>Home</a>
+											<a onClick={func} className='mb-4'>
+												About me
+											</a>
+											<a onClick={heroFunction} className=''>
 												Portfolio
 											</a>
-										</li>
-									</ul>
-								</div>
-								<div>
-									<h2 className='mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white'>
-										Follow us
-									</h2>
-									<ul className='text-gray-500 dark:text-gray-400 font-medium'>
-										<li className='mb-4'>
-											<a
-												href='https://github.com/themesberg/flowbite'
-												className='hover:underline '
-											>
-												Github
-											</a>
-										</li>
-										<li>
-											<a
-												href='https://discord.gg/4eeurUVvTy'
-												className='hover:underline'
-											>
-												Discord
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div>
-									<h2 className='mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white'>
-										Legal
-									</h2>
-									<ul className='text-gray-500 dark:text-gray-400 font-medium'>
-										<li className='mb-4'>
-											<a href='#' className='hover:underline'>
-												Privacy Policy
-											</a>
-										</li>
-										<li>
-											<a href='#' className='hover:underline'>
-												Terms &amp; Conditions
-											</a>
-										</li>
-									</ul>
+										</ul>
+									</div>
+									<div>
+										<ul className='text-white dark:text-gray-400 font-medium'>
+											<li className='mb-4'>
+												<a
+													href='https://github.com/Aziret055?tab=repositories'
+													className='hover:underline '
+												>
+													Follow as
+												</a>
+											</li>
+											<li className='mb-4'>
+												<a
+													href='https://github.com/Aziret055?tab=repositories'
+													className='hover:underline '
+												>
+													Github
+												</a>
+											</li>
+											<li>
+												<a
+													href='https://discord.gg/4eeurUVvTy'
+													className='hover:underline'
+												>
+													Discord
+												</a>
+											</li>
+										</ul>
+									</div>
+									<div>
+										<ul className='text-white dark:text-gray-400 font-medium'>
+											<li className='mb-4'>
+												<a href='#' className='hover:underline'>
+													Contact :
+												</a>
+											</li>
+											<li className='mb-4'>
+												<a href='#' className='hover:underline'>
+													Privacy Policy
+												</a>
+											</li>
+											<li>
+												<a href='#' className='hover:underline'>
+													Terms &amp; Conditions
+												</a>
+											</li>
+										</ul>
+									</div>
 								</div>
 							</div>
+							<iframe
+								style={{
+									width: '550px',
+									height: '400px',
+									style: 'border:0;',
+									allowfullscreen: '',
+									loading: 'lazy',
+									referrerpolicy: 'no-referrer-when-downgrade'
+								}}
+								src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2923.1895779169395!2d74.61086921189307!3d42.88994680133996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb7ed7cb24803%3A0xe1c77d12212757b7!2zMTM4INGD0LsuINCa0YPRgNC10L3QutC10LXQstCwLCDQkdC40YjQutC10Lo!5e0!3m2!1sru!2skg!4v1713268545663!5m2!1sru!2skg'
+							></iframe>
 						</div>
+
 						<hr className='my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8' />
 						<div className='sm:flex sm:items-center sm:justify-between'>
-							<span className='text-sm text-gray-500 sm:text-center dark:text-gray-400'>
+							<span className='text-sm text-white sm:text-center dark:text-gray-400'>
 								© 2023{' '}
 								<a href='https://flowbite.com/' className='hover:underline'>
 									Flowbite™
@@ -97,7 +115,7 @@ const Footer = () => {
 							<div className='flex mt-4 sm:justify-center sm:mt-0'>
 								<a
 									href='#'
-									className='text-gray-500 hover:text-gray-900 dark:hover:text-white'
+									className='text-white hover:text-white dark:hover:text-white'
 								>
 									<svg
 										className='w-4 h-4'
@@ -190,54 +208,6 @@ const Footer = () => {
 						</div>
 					</div>
 				</footer>
-
-				<div class='flex items-center'>
-					<svg
-						class='w-4 h-4 text-yellow-300 ms-1'
-						aria-hidden='true'
-						xmlns='http://www.w3.org/2000/svg'
-						fill='currentColor'
-						viewBox='0 0 22 20'
-					>
-						<path d='M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z' />
-					</svg>
-					<svg
-						class='w-4 h-4 text-yellow-300 ms-1'
-						aria-hidden='true'
-						xmlns='http://www.w3.org/2000/svg'
-						fill='currentColor'
-						viewBox='0 0 22 20'
-					>
-						<path d='M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z' />
-					</svg>
-					<svg
-						class='w-4 h-4 text-yellow-300 ms-1'
-						aria-hidden='true'
-						xmlns='http://www.w3.org/2000/svg'
-						fill='currentColor'
-						viewBox='0 0 22 20'
-					>
-						<path d='M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z' />
-					</svg>
-					<svg
-						class='w-4 h-4 text-yellow-300 ms-1'
-						aria-hidden='true'
-						xmlns='http://www.w3.org/2000/svg'
-						fill='currentColor'
-						viewBox='0 0 22 20'
-					>
-						<path d='M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z' />
-					</svg>
-					<svg
-						class='w-4 h-4 ms-1 text-gray-300 dark:text-gray-500'
-						aria-hidden='true'
-						xmlns='http://www.w3.org/2000/svg'
-						fill='currentColor'
-						viewBox='0 0 22 20'
-					>
-						<path d='M20.924 7.625a1.523 1.523 0 0 0-1.238-1.044l-5.051-.734-2.259-4.577a1.534 1.534 0 0 0-2.752 0L7.365 5.847l-5.051.734A1.535 1.535 0 0 0 1.463 9.2l3.656 3.563-.863 5.031a1.532 1.532 0 0 0 2.226 1.616L11 17.033l4.518 2.375a1.534 1.534 0 0 0 2.226-1.617l-.863-5.03L20.537 9.2a1.523 1.523 0 0 0 .387-1.575Z' />
-					</svg>
-				</div>
 			</div>
 		</div>
 	)

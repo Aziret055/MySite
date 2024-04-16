@@ -1,0 +1,13 @@
+.back {
+	backdrop-filter: blur(10px);
+	background: #2122225d;
+}
+body {
+	background: rgb(103, 103, 103);
+	background: linear-gradient(
+		90deg,
+		rgba(103, 103, 103, 1) 0%,
+		rgba(75, 77, 78, 1) 46%,
+		rgba(120, 114, 114, 1) 100%
+	);
+}
