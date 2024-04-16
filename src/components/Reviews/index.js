@@ -35,31 +35,33 @@ function Reviews() {
 	console.log(tasks)
 
 	return (
-		<div className='container mx-auto '>
-			<h1 className='text-3xl font-bold flex justify-center items-center my-11'>
-				Reviews
-			</h1>
-			<div className='flex space-x-2 mb-4 my-24'>
-				<input
-					onKeyDown={keydown}
-					type='text'
-					value={newTask}
-					onChange={e => setNewTask(e.target.value)}
-					className='inp p-2 border w-full'
-					placeholder='Введите комментарий'
-				/>
-				<button
-					onClick={addTask}
-					className='butt p-2 bg-blue-500 text-white hover:bg-blue-700'
-				>
-					Add comments
-				</button>
+		<div id='review'>
+			<div className='container mx-auto '>
+				<h1 className='text-3xl font-bold flex justify-center items-center my-11'>
+					Reviews
+				</h1>
+				<div className='flex space-x-2 mb-4 my-24'>
+					<input
+						onKeyDown={keydown}
+						type='text'
+						value={newTask}
+						onChange={e => setNewTask(e.target.value)}
+						className='inp p-2 border w-full'
+						placeholder='Введите комментарий'
+					/>
+					<button
+						onClick={addTask}
+						className='butt p-2 bg-blue-500 text-white hover:bg-blue-700'
+					>
+						Add comments
+					</button>
+				</div>
+				<ul className='list'>
+					{tasks?.map((el, index) => (
+						<ReviewBlock el={el} index={index} />
+					))}
+				</ul>
 			</div>
-			<ul className='list'>
-				{tasks?.map((el, index) => (
-					<ReviewBlock el={el} index={index} />
-				))}
-			</ul>
 		</div>
 	)
 }

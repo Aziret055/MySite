@@ -21,7 +21,7 @@ const About = () => {
 	return (
 		<div id='about'>
 			<div className='container'>
-				<h1 className='text-4xl text-center my-14 font-black'>About me</h1>
+				<h1 className='text-4xl text-center my-[1	00px] font-black'>About me</h1>
 				<div className='about flex justify-center my-32'>
 					<div className='relative about-text bg-zinc-800 rounded-xl  w-96 p-6 text-center text-zinc-200 font-semibold flex items-center justify-center mx-auto'>
 						<img

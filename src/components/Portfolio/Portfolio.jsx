@@ -14,7 +14,7 @@ function Portfolio() {
 		<div id='portfolio'>
 			<div className='container'>
 				<h1 className='text-4xl text-center my-11 font-black '>My Portfolio</h1>
-				<div className='px-[300px]'>
+				<div className='px-[280px]'>
 					<div className='slider-container'>
 						<Slider {...settings}>
 							<div>

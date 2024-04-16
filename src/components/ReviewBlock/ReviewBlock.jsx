@@ -25,28 +25,9 @@ const ReviewBlock = ({ el, index }) => {
 		updatedTasks.splice(index, 1)
 		setTasks(updatedTasks)
 	}
-	//!
-	// Get all like and dislike checkboxes
-	const likeCheckboxes = document.querySelectorAll('#like-checkbox')
-	const dislikeCheckboxes = document.querySelectorAll('#dislike-checkbox')
 
-	// Attach click event listeners to each like checkbox
-	likeCheckboxes.forEach(checkbox => {
-		checkbox.addEventListener('click', function () {
-			// Your like button logic here
-		})
-	})
-
-	// Attach click event listeners to each dislike checkbox
-	dislikeCheckboxes.forEach(checkbox => {
-		checkbox.addEventListener('click', function () {
-			// Your dislike button logic here
-		})
-	})
-
-	//!
 	return (
-		<div>
+		<div id='review'>
 			<div className=''>
 				<div className='cc flex items-start justify-start gap-8'>
 					<Avatar alt='Travis Howard' src='/static/images/avatar/2.jpg' />

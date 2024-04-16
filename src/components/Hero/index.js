@@ -1,3 +1,4 @@
+import gsap from 'gsap'
 import React from 'react'
 import whiteJacet from '../../img/SeeLeptop-removebg-preview.png'
 import four from '../../img/four.png'
@@ -5,8 +6,16 @@ import greenJacket from '../../img/greenPhoto.jpg'
 import one from '../../img/one.png'
 import there from '../../img/there.png'
 import two from '../../img/two.png'
+
 // import video from '../../img/video.MOV'
 const Hero = () => {
+	function contactMe() {
+		gsap.to(window, {
+			scrollTo: { y: 'footer' },
+			ease: 'expo',
+			duration: 1.3
+		})
+	}
 	return (
 		<div
 			id='hero'
@@ -16,13 +25,6 @@ const Hero = () => {
 				backgroundImage: ` linear-gradient(to right, rgba(31.5, 31.5, 31.5, 1) calc((50vw - 1000px) - 340px), rgba(31.5, 31.5, 31.5, 0.84) 50%, rgba(31.5, 31.5, 31.5, 0.84) 100%), url(${greenJacket})`
 			}}
 		>
-			{/* <video
-				className='w-full h-[100vh]'
-				src={video}
-				autoPlay
-				muted
-				loop
-			></video> */}
 			<div className='container'>
 				<div className='hero pt-[100px]'>
 					<section className=' dark:bg-gray-900'>
@@ -42,6 +44,7 @@ const Hero = () => {
 									maybe a turnkey website? Then contact me
 								</p>
 								<a
+									onClick={contactMe}
 									href='#'
 									class='inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border border-gray-300 rounded-lg hover:bg-gray-900 focus:ring-4 focus:ring-gray-900 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800'
 								>

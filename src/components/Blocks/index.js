@@ -11,7 +11,9 @@ const Blocks = () => {
 	return (
 		<div id='block'>
 			<div className='container'>
-				<div className='bb flex flex-wrap gap-4 ml-11 mt-11'>
+				<div
+					className='bb flex flex-wrap gap-4 ml-11 mt-11'
+				>
 					<div className='flex items-center justify-center bg-zinc-700 h-[240px] w-[300px] mx-auto rounded-xl	 flex-col '>
 						<img
 							className='h-auto max-w-[270px] rounded-lg'
