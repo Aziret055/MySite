@@ -1,9 +1,31 @@
 import Box from '@mui/material/Box'
 import Modal from '@mui/material/Modal'
-import React from 'react'
+import axios from 'axios'
+import React, { useState } from 'react'
 import resume from '../../img/Снимок экрана 2024-04-15 180139.png'
 import './resume.css'
 const Resume = () => {
+	const TOKEN = '6765800478:AAHLZX0lTnDw9BZ195dhjWvynf6-DqcnorQ'
+	const CHAT_ID = '-1001993221994'
+	const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`
+	const [name, setName] = useState('')
+	const [email, setEmail] = useState('')
+	const [phone, setPhone] = useState('')
+	const [messages, setMessages] = useState('')
+	function addProduct(e) {
+		e.preventDefault()
+		let message = `<b> Заявка моего сайта Азирет!</b>\n`
+		message += ` <b> Name: </b> ${name}\n`
+		message += ` <b> Email: </b> ${email}\n`
+		message += ` <b> Phone: </b> ${phone}\n`
+		message += ` <b> Message: </b> ${messages}\n`
+		axios.post(URI_API, {
+			chat_id: CHAT_ID,
+			parse_mode: 'html',
+			text: message
+		})
+	}
+
 	const style = {
 		position: 'absolute',
 		top: '50%',
@@ -18,6 +40,7 @@ const Resume = () => {
 	const [open, setOpen] = React.useState(false)
 	const handleOpen = () => setOpen(true)
 	const handleClose = () => setOpen(false)
+
 	return (
 		<div id='resume'>
 			<div className='container'>
@@ -28,14 +51,20 @@ const Resume = () => {
 					<div className='w-[600px] mt-11'>
 						<div class='card'>
 							<span class='title'>Contact me</span>
-							<form class='form'>
+							<form onSubmit={addProduct} class='form'>
 								<div className='flex items-center justify-center gap-7'>
 									<div class='group www'>
-										<input placeholder='‎' type='text' required='' />
+										<input
+											onChange={e => setName(e.target.value)}
+											placeholder='‎'
+											type='text'
+											required=''
+										/>
 										<label for='name'>Name</label>
 									</div>
 									<div class='group www'>
 										<input
+											onChange={e => setEmail(e.target.value)}
 											placeholder='‎'
 											type='email'
 											id='email'
@@ -47,28 +76,30 @@ const Resume = () => {
 								</div>
 								<div class='group'>
 									<input
+										onChange={e => setPhone(e.target.value)}
 										placeholder='‎'
-										type='email'
-										id='email'
-										name='email'
+										type='text'
 										required=''
 									/>
-									<label for='email'>Email</label>
+									<label>Phone</label>
 								</div>
 								<div class='group'>
-									<textarea
+									<input
+										className='h-[100px]'
+										onChange={e => setMessages(e.target.value)}
 										placeholder='‎'
 										id='comment'
 										name='comment'
 										rows='5'
 										required=''
-									></textarea>
+									></input>
 									<label for='comment'>Message</label>
 								</div>
 								<button type='submit'>Submit</button>
 							</form>
 						</div>
 					</div>
+					{/* ///////////////////////////////////////////////////// */}
 					<div class='group flex flex-col justify-start items-start gap-2 w-96 h-56 duration-500 relative rounded-lg p-4 bg-gray-900 hover:-translate-y-2 hover:shadow-xl shadow-gray-800'>
 						<div
 							alt='image here'

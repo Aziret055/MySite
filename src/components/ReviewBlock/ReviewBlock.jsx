@@ -4,7 +4,7 @@ import { HiOutlineDotsVertical } from 'react-icons/hi'
 
 const ReviewBlock = ({ el, index }) => {
 	const [auth, setAuth] = React.useState(true)
-	const [countDislike, setCountDislike] = useState(8)
+	const [countDislike, setCountDislike] = useState(1)
 	const [anchorEl, setAnchorEl] = React.useState(null)
 	const [tasks, setTasks] = useState([])
 	const [count, setCount] = useState(12)

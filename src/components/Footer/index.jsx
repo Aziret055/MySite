@@ -58,15 +58,25 @@ const Footer = () => {
 											<div className=''>
 												<span className='flex gap-4 '>
 													<h3>phone : </h3>
-													<a href='#'>+996 703601008</a>
+													<a>+996 703601008</a>
 												</span>
 												<span className='flex gap-4 my-2'>
 													<h3>email : </h3>
-													<a href='#'>kojom5erd1ev1@gmail.com</a>
+													<a
+														target='_blank'
+														href='https://mail.google.com/mail/u/0/#inbox'
+													>
+														kojom5erd1ev1@gmail.com
+													</a>
 												</span>
 												<span className='flex gap-4'>
 													<h3>address : </h3>
-													<a href='#'>138 ул. Куренкеева</a>
+													<a
+														target='_blank'
+														href='https://www.google.com/maps/place/138+%D1%83%D0%BB.+%D0%9A%D1%83%D1%80%D0%B5%D0%BD%D0%BA%D0%B5%D0%B5%D0%B2%D0%B0,+%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA/@42.8899468,74.6108692,17z/data=!3m1!4b1!4m5!3m4!1s0x389eb7ed7cb24803:0xe1c77d12212757b7!8m2!3d42.8899429!4d74.6134495?entry=ttu'
+													>
+														138 ул. Куренкеева
+													</a>
 												</span>
 											</div>
 										</div>
