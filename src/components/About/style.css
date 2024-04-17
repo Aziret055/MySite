@@ -1,40 +1,246 @@
 .about-text img {
-    border: 3px solid grey;
-    z-index: -100;
+	border: 3px solid grey;
+	z-index: -100;
 }
 .circle {
-    position: absolute;
-    top: 0;
-    left: -450px;
-    width: 692px;
-height: 692px;
-flex-shrink: 0;
-border-radius: 792px;
-border: 89px solid var(--text, #020101);
-box-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.95);
-z-index: -200;
+	position: absolute;
+	top: 0;
+	left: -450px;
+	width: 692px;
+	height: 692px;
+	flex-shrink: 0;
+	border-radius: 792px;
+	border: 89px solid var(--text, #020101);
+	box-shadow: 0px 4px 70px 0px rgba(0, 0, 0, 0.95);
+	z-index: -200;
 }
 .circle1 {
-    position: absolute;
-    top: -40px;
-    right: -246px;
-    z-index: -200;
-    width: 356px;
-height: 356px;
-flex-shrink: 0;
-border-radius: 356px;
-border: 34px solid #E2A200;
-box-shadow: 0px 4px 70px 0px rgba(226, 162, 0, 1.25);
+	position: absolute;
+	top: -40px;
+	right: -246px;
+	z-index: -200;
+	width: 356px;
+	height: 356px;
+	flex-shrink: 0;
+	border-radius: 356px;
+	border: 34px solid #e2a200;
+	box-shadow: 0px 4px 70px 0px rgba(226, 162, 0, 1.25);
 }
-.circle2{
-    position: absolute;
-    bottom: -100px;
-    right: -400px;
-    z-index: -200;
-    width: 486px;
-height: 486px;
-flex-shrink: 0;
-border-radius: 486px;
-border: 55px solid var(--blu, #00C4F0);
-box-shadow: 0px 4px 70px 0px rgba(0, 193, 236, 1);
+.circle2 {
+	position: absolute;
+	bottom: -100px;
+	right: -400px;
+	z-index: -200;
+	width: 486px;
+	height: 486px;
+	flex-shrink: 0;
+	border-radius: 486px;
+	border: 55px solid var(--blu, #00c4f0);
+	box-shadow: 0px 4px 70px 0px rgba(0, 193, 236, 1);
+}
+
+@media (max-width: 1299px) {
+	.circle {
+		left: -382px;
+	}
+	.circle2 {
+		right: -371px;
+	}
+}
+@media (max-width: 1161px) {
+	.circle {
+		left: -342px;
+		width: 683px;
+		height: 576px;
+		top: 50px;
+		border: 69px solid var(--text, #020101);
+	}
+	.circle2 {
+		right: -276px;
+	}
+}
+@media (max-width: 1089px) {
+	.circle {
+		left: -224px;
+		width: 576px;
+		height: 576px;
+		top: -110px;
+		border: 69px solid var(--text, #020101);
+	}
+}
+@media (max-width: 984px) {
+	.aboutBig {
+		right: -246px;
+		max-width: 75%;
+	}
+	.circle2 {
+		right: -236px;
+	}
+}
+@media (max-width: 865px) {
+	.circle1 {
+		right: -96px;
+	}
+	.circle2 {
+		left: -10px;
+	}
+	.circle {
+		left: -91px;
+		width: 376px;
+		height: 376px;
+		top: 60px;
+		border: 39px solid var(--text, #020101);
+	}
+	.aboutImgSmall {
+		height: 217px;
+		width: 170px;
+		left: -165px;
+		bottom: -40px;
+	}
+	.aboutBig {
+		right: -171px;
+		max-width: 53%;
+	}
+}
+@media (max-width: 720px) {
+	.circle2 {
+		width: 407px;
+		height: 407px;
+	}
+	.aboutImgSmall {
+		bottom: -327px;
+		left: 83px;
+	}
+	.andBottom {
+		top: 100px;
+	}
+	.andBottom {
+		top: 721px;
+		left: -58px;
+	}
+	.aboutBig {
+		bottom: -228px;
+		right: -52px;
+		max-width: 55%;
+	}
+	.circle2 {
+		bottom: -380px;
+	}
+	.circle {
+		top: 262px;
+	}
+}
+@media (max-width: 590px) {
+	.circle1 {
+		right: -49px;
+	}
+	.circle {
+		left: -54px;
+	}
+}
+@media (max-width: 483px) {
+	.circle2 {
+		width: 318px;
+		height: 318px;
+		left: 80px;
+	}
+	.circle1 {
+		width: 300px;
+		height: 300px;
+		right: -21px;
+	}
+	.circle {
+		width: 300px;
+		height: 300px;
+		left: 36px;
+		top: 517px;
+		left: -17px;
+	}
+	.aboutBig {
+		right: -15px;
+	}
+	.andBottom {
+		left: -11px;
+	}
+	.aboutBig {
+		bottom: -339px;
+	}
+	.aboutImgSmall {
+		bottom: -492px;
+	}
+	.andBottom {
+		top: 866px;
+	}
+}
+@media (max-width: 442px) {
+	.circle2 {
+		left: 41px;
+	}
+}
+@media (max-width: 419px) {
+	.andBottom {
+		top: 969px;
+	}
+}
+@media (max-width: 397px) {
+	.andBottom {
+		top: 922px;
+	}
+	.aboutPara {
+		font-size: 15px;
+	}
+	.circle2 {
+		left: 0px;
+		bottom: -441px;
+	}
+}
+@media (max-width: 382px) {
+	.aboutPara {
+		font-size: 15px;
+	}
+}
+@media (max-width: 376px) {
+	.andBottom {
+		top: 722px;
+	}
+
+	.aboutPara {
+		font-size: 14px;
+	}
+	.aboutImgSmall {
+		left: 15px;
+		padding: 0.75rem;
+	}
+	.aboutBig {
+		max-width: 64%;
+		padding: 0.75rem;
+	}
+}
+@media (max-width: 369px) {
+	.andBottom {
+		top: 766px;
+	}
+}
+@media (max-width: 354px) {
+	.andBottom {
+		top: 700px;
+	}
+	.circle2 {
+		left: -14px;
+	}
+	.aboutPara {
+		font-size: 13px;
+	}
+	.circle {
+		top: 407px;
+	}
+}
+@media (max-width: 345px) {
+	.aboutPara {
+		font-weight: normal;
+	}
+	.circle2 {
+		width: 300px;
+		height: 300px;
+	}
 }

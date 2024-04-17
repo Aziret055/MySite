@@ -32,6 +32,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		padding-bottom: 40px;
 	}
 	.heroTwo h1 {
 		text-align: center;
