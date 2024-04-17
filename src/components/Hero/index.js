@@ -26,7 +26,7 @@ const Hero = () => {
 		>
 			<div className='container'>
 				<div className='heroMT hero pt-[100px]'>
-					<section className=' dark:bg-gray-900'>
+					<section className=''>
 						<div class='heroAdap flex mt-[100px] px-11'>
 							<div class='heroTwo mr-auto place-self-center'>
 								<h1 class='max-w-2xl  text-4xl font-extrabold tracking-tight leading-none md:text-5xl text-white'>
