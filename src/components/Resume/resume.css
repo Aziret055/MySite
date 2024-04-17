@@ -100,3 +100,37 @@
 .form button:hover {
 	background-color: #27408b;
 }
+@media (max-width: 1548px) {
+	.resumeRod {
+		flex-direction: column-reverse;
+		gap: 140px;
+	}
+}
+@media (max-width: 675px) {
+	.resumeText {
+		font-size: 18px;
+	}
+	.resumeForm {
+		width: 500px;
+	}
+}
+@media (max-width: 510px) {
+	.resumeForm {
+		width: 400px;
+		height: 400px;
+	}
+}
+
+@media (max-width: 482px) {
+	.aboutGroup {
+		width: 19rem;
+	}
+}
+@media (max-width: 410px) {
+	.aboutGroup {
+		width: 220px;
+	}
+	.resumeForm {
+		width: 320px;
+	}
+}

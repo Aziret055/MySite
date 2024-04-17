@@ -10,6 +10,7 @@ import Blocks from './components/Blocks'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Portfolio from './components/Portfolio/Portfolio'
+import Resume from './components/Resume'
 import Reviews from './components/Reviews'
 gsap.registerPlugin(ScrollToPlugin)
 
@@ -22,8 +23,8 @@ function App() {
 			<Portfolio />
 			<About />
 			<Reviews />
-			{/* <Resume />
-			<Footer /> */}
+			<Resume />
+			{/* <Footer /> */}
 			<ToastContainer />
 		</div>
 	)
