@@ -1,0 +1,43 @@
+.blocks-block {
+	width: 270px;
+	height: 270px;
+	flex-shrink: 0;
+	border-radius: 29px;
+	background: #2a2a2a;
+	box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.47);
+}
+
+@media (max-width: 824px) {
+	.blocksBock {
+		width: 194px;
+		height: 194px;
+	}
+	.blocksBock img {
+		max-width: 50px;
+	}
+	.bb {
+		margin-left: 0.75rem;
+	}
+}
+@media (max-width: 519px) {
+	.blocksBock {
+		width: 124px;
+		height: 124px;
+	}
+	.blocksBock h1 {
+		font-weight: 500;
+		font-size: 13px;
+	}
+}
+@media (max-width: 345px) {
+	.blocksBock {
+		width: 100px;
+		height: 100px;
+	}
+	.blocksBock img {
+		max-width: 32px;
+	}
+	.gap-8 {
+		gap: 1rem;
+	}
+}

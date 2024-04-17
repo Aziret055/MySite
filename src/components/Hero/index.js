@@ -7,7 +7,6 @@ import one from '../../img/one.png'
 import there from '../../img/there.png'
 import two from '../../img/two.png'
 
-// import video from '../../img/video.MOV'
 const Hero = () => {
 	function contactMe() {
 		gsap.to(window, {
@@ -26,17 +25,17 @@ const Hero = () => {
 			}}
 		>
 			<div className='container'>
-				<div className='hero pt-[100px]'>
+				<div className='heroMT hero pt-[100px]'>
 					<section className=' dark:bg-gray-900'>
-						<div class='grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12'>
-							<div class='mr-auto place-self-center lg:col-span-7'>
-								<h1 class='max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl text-white'>
+						<div class='heroAdap flex mt-[100px] px-11'>
+							<div class='heroTwo mr-auto place-self-center'>
+								<h1 class='max-w-2xl  text-4xl font-extrabold tracking-tight leading-none md:text-5xl text-white'>
 									Hello
 								</h1>
-								<h1 class='max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white text-white'>
+								<h1 class='max-w-2xl text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white text-white'>
 									I'm Aziret
 								</h1>
-								<p class='max-w-2xl my-11 text-white'>
+								<p class='heroP max-w-2xl  my-5 text-white'>
 									I've been doing web design, front-end and back-end development{' '}
 									<br />
 									for a year now. Do you need a website design, site layout, or{' '}
@@ -51,29 +50,29 @@ const Hero = () => {
 									Contact me
 								</a>
 							</div>
-							<div class='dott hidden lg:mt-0 lg:col-span-5 lg:flex relative'>
+							<div class='dott flex relative'>
 								<img
-									className='object-cover h-[460px] w-[459px] rounded-[100%] mt-[0px]'
+									className='heroImg object-cover h-[460px] w-[459px] rounded-[100%] mt-[0px]'
 									src={whiteJacet}
 									alt='img'
 								/>
 								<img
-									className='absolute top-0 left-[-30px] w-[80px]'
+									className='heroTOP absolute top-0 left-[-30px] w-[80px]'
 									src={one}
 									alt='img'
 								/>
 								<img
-									className='absolute top-[200px] left-[-100px] w-[80px]'
+									className='heroUX absolute top-[200px] left-[-100px] w-[80px]'
 									src={two}
 									alt='img'
 								/>
 								<img
-									className='absolute top-[400px] left-[-10px] w-[80px]'
+									className='heroPs absolute top-[400px] left-[-10px] w-[80px]'
 									src={there}
 									alt='img'
 								/>
 								<img
-									className='absolute top-0 right-[-30px] w-20'
+									className='heroTOP absolute top-0 right-[-30px] w-20'
 									src={four}
 									alt='img'
 								/>

@@ -1,6 +1,5 @@
 @import './components/Hero/style.css';
-@import './components/Blocks/style.css';
-@import './components/About/style.css';
+
 
 * {
 	margin: 0;

@@ -1,8 +1,25 @@
+import Logout from '@mui/icons-material/Logout'
+import Box from '@mui/material/Box'
+import Divider from '@mui/material/Divider'
+import IconButton from '@mui/material/IconButton'
+import ListItemIcon from '@mui/material/ListItemIcon'
+import Menu from '@mui/material/Menu'
+import MenuItem from '@mui/material/MenuItem'
+import Tooltip from '@mui/material/Tooltip'
 import gsap from 'gsap'
-import React from 'react'
+import React, { useState } from 'react'
 import image from '../../img/Снимок экрана от 2024-01-11 14-51-37.png'
 import './header.css'
 const Header = () => {
+	const [menu, setMenu] = useState(false)
+	const [anchorEl, setAnchorEl] = React.useState(null)
+	const open = Boolean(anchorEl)
+	const handleClick = event => {
+		setAnchorEl(event.currentTarget)
+	}
+	const handleClose = () => {
+		setAnchorEl(null)
+	}
 	function toContact() {
 		gsap.to(window, {
 			scrollTo: { y: '#footer' },
@@ -56,37 +73,119 @@ const Header = () => {
 							</span>
 						</a>
 						<div className='flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse'>
-							<button
-								onClick={toResume}
-								type='button'
-								className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
-							>
-							 My	Resume
-							</button>
-							<button
-								data-collapse-toggle='navbar-sticky'
-								type='button'
-								className='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
-								aria-controls='navbar-sticky'
-								aria-expanded='false'
-							>
-								<span className='sr-only'>Open main menu</span>
-								<svg
-									className='w-5 h-5'
-									aria-hidden='true'
-									xmlns='http://www.w3.org/2000/svg'
-									fill='none'
-									viewBox='0 0 17 14'
+							<React.Fragment>
+								<Box
+									sx={{
+										display: 'flex',
+										alignItems: 'center',
+										textAlign: 'center'
+									}}
 								>
-									<path
-										stroke='currentColor'
-										stroke-linecap='round'
-										stroke-linejoin='round'
-										stroke-width='2'
-										d='M1 1h15M1 7h15M1 13h15'
-									/>
-								</svg>
-							</button>
+									<Tooltip title='Account settings'>
+										<IconButton
+											onClick={handleClick}
+											size='small'
+											sx={{ ml: 2 }}
+											aria-controls={open ? 'account-menu' : undefined}
+											aria-haspopup='true'
+											aria-expanded={open ? 'true' : undefined}
+										>
+											<button
+												onClick={() => setMenu(!menu)}
+												// data-collapse-toggle='navbar-sticky'
+												type='button'
+												className='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
+												aria-controls='navbar-sticky'
+												aria-expanded='false'
+											>
+												<svg
+													className='w-5 h-5'
+													aria-hidden='true'
+													xmlns='http://www.w3.org/2000/svg'
+													fill='none'
+													viewBox='0 0 17 14'
+												>
+													<path
+														stroke='currentColor'
+														stroke-linecap='round'
+														stroke-linejoin='round'
+														stroke-width='2'
+														d='M1 1h15M1 7h15M1 13h15'
+													/>
+												</svg>
+											</button>
+										</IconButton>
+									</Tooltip>
+								</Box>
+								<Menu
+									className=''
+									anchorEl={anchorEl}
+									id='account-menu'
+									open={open}
+									onClose={handleClose}
+									onClick={handleClose}
+									PaperProps={{
+										elevation: 0,
+										sx: {
+											overflow: 'visible',
+											filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
+											mt: 1.5,
+											'& .MuiAvatar-root': {
+												width: 32,
+												height: 32,
+												ml: -0.5,
+												mr: 1
+											},
+											'&::before': {
+												content: '""',
+												display: 'block',
+												position: 'absolute',
+												top: 0,
+												right: 14,
+												width: 10,
+												height: 10,
+												bgcolor: 'background.paper',
+												transform: 'translateY(-50%) rotate(45deg)',
+												zIndex: 0
+											}
+										}
+									}}
+									transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+									anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+								>
+									<MenuItem
+										className='w-[600px] h-[150px]'
+										onClick={handleClose}
+									>
+										Home
+									</MenuItem>
+									<MenuItem className='h-[100px]' onClick={() => {
+										handleClose()
+										aboutMy()
+									}}>
+										About me
+									</MenuItem>
+									<Divider />
+									<MenuItem className='h-[100px]' onClick={() => {
+										handleClose()
+										toReview()
+									}}>
+										Reviews
+									</MenuItem>
+									<MenuItem className='h-[100px]' onClick={() => {
+										handleClose()
+										toContact()
+									}}>
+										Contact
+									</MenuItem>
+									<MenuItem className='h-[100px]' onClick={handleClose}>
+										<ListItemIcon>
+											<Logout fontSize='small' />
+										</ListItemIcon>
+										Logout
+									</MenuItem>
+								</Menu>
+							</React.Fragment>
 						</div>
 						<div
 							className='items-center justify-between hidden w-full md:flex md:w-auto md:order-1'
