@@ -1,6 +1,8 @@
 // src/App.js
 
 import React, { useState } from 'react'
+import { Bounce, toast } from 'react-toastify'
+
 import ReviewBlock from '../ReviewBlock/ReviewBlock'
 import './review.css'
 
@@ -15,10 +17,22 @@ function Reviews() {
 
 			setNewTask('')
 		} else {
-			alert('Error')
+			noti()
 		}
 	}
-
+	function noti() {
+		toast.error('Заполните пустое поле!', {
+			position: 'top-right',
+			autoClose: 1000,
+			hideProgressBar: false,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: true,
+			progress: undefined,
+			theme: 'light',
+			transition: Bounce
+		})
+	}
 	const handleChange = event => {
 		setAuth(event.target.checked)
 	}
@@ -49,11 +63,9 @@ function Reviews() {
 						className='inp p-2 border w-full'
 						placeholder='Введите комментарий'
 					/>
-					<button
-						onClick={addTask}
-						className='butt p-2 bg-blue-500 text-white hover:bg-blue-700'
-					>
-						Add comments
+
+					<button onClick={addTask} className='butt '>
+						Add
 					</button>
 				</div>
 				<ul className='list'>

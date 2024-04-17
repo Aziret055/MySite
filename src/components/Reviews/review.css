@@ -410,3 +410,22 @@
 			-71px -318.3333333333px #0073ff;
 	}
 }
+.butt {
+	padding: 0px 30px;
+	height: 49px;
+	margin-top: 15px;
+	font-weight: 800;
+	border: 2px solid rgb(59, 59, 59);
+	color: rgb(59, 59, 59);
+	line-height: 17px;
+}
+@media (max-width: 721px) {
+	#review {
+		margin-top: 470px;
+	}
+}
+@media (max-width: 483px) {
+	#review {
+		margin-top: 570px;
+	}
+}
