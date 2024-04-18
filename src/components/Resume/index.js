@@ -1,8 +1,7 @@
-import { Container } from '@mui/material'
-import Box from '@mui/material/Box'
-import Modal from '@mui/material/Modal'
 import axios from 'axios'
 import React, { useState } from 'react'
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 import resume from '../../img/Снимок экрана 2024-04-15 180139.png'
 import './resume.css'
 const Resume = () => {
@@ -95,12 +94,14 @@ const Resume = () => {
 							alt='image here'
 							class='absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-800'
 						>
-							<img
-								className='img1'
-								onClick={handleOpen}
-								src={resume}
-								alt='img'
-							/>
+							<Zoom>
+								<img
+									className='img1'
+									// onClick={handleOpen}
+									src={resume}
+									alt='img'
+								/>
+							</Zoom>
 						</div>
 
 						<div class=''>
@@ -116,18 +117,16 @@ const Resume = () => {
 						>
 							Look
 						</button>
-						<Modal
+						{/* <Modal
 							open={open}
 							onClose={handleClose}
 							aria-labelledby='modal-modal-title'
 							aria-describedby='modal-modal-description'
 						>
-							<Container>
-								<Box className='resumePhotos'>
-									<img onClick={handleClose} src={resume} alt='img' />
-								</Box>
-							</Container>
-						</Modal>
+							<Box className='resumePhotos'>
+								<img onClick={handleClose} src={resume} alt='img' />
+							</Box>
+						</Modal> */}
 					</div>
 				</div>
 			</div>

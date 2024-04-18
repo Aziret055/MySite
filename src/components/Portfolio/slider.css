@@ -14,8 +14,8 @@
 
 .swiper {
 	width: 100%;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 100px;
+	padding-bottom: 100px;
 }
 
 .swiper-slide {
@@ -28,4 +28,10 @@
 .swiper-slide img {
 	display: block;
 	width: 100%;
+	height: 300px;
+	object-fit: cover;
+	border-radius: 20px;
+	-webkit-box-shadow: 4px 4px 77px 27px rgba(34, 60, 80, 0.82);
+	-moz-box-shadow: 4px 4px 77px 27px rgba(34, 60, 80, 0.82);
+	box-shadow: 4px 4px 77px 27px rgba(34, 60, 80, 0.82);
 }
