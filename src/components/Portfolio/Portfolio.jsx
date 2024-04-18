@@ -1,62 +1,87 @@
 import React from 'react'
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
+import 'swiper/css'
+import 'swiper/css/effect-coverflow'
+import 'swiper/css/pagination'
+import { EffectCoverflow, Pagination } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import bookShop from '../../img/bookshop.jpg'
+import moviewPhoto from '../../img/moviePhoto.jpg'
+import teeth from '../../img/teethPhoto.png'
 import './slider.css'
-function Portfolio() {
-	const settings = {
-		className: 'center',
-		centerMode: true,
-		infinite: true,
-		centerPadding: '190px',
-		slidesToShow: 1,
-		speed: 500
-	}
+export default function Portfolio() {
 	return (
-		<div id='portfolio'>
-			<div className='container'>
-				<h1 className='text-4xl text-center my-11 font-black '>My Portfolio</h1>
-	
-				<div class='containerP'>
-					<div class='card'>
-						<a target='_blank' href='https://book-shop-brown-three.vercel.app/'>
+		<>
+			<div className='bodyBody'>
+				<Swiper
+					effect={'coverflow'}
+					grabCursor={true}
+					centeredSlides={true}
+					slidesPerView={'auto'}
+					coverflowEffect={{
+						rotate: 10,
+						stretch: 0,
+						depth: 100,
+						modifier: 3,
+						slideShadows: true
+					}}
+					pagination={true}
+					modules={[EffectCoverflow, Pagination]}
+					className='mySwiper'
+				>
+					<SwiperSlide>
+						<img src='https://swiperjs.com/demos/images/nature-1.jpg' />
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={teeth} />
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src={moviewPhoto} />
+					</SwiperSlide>
+					<Zoom>
+						<SwiperSlide>
+							<img src={bookShop} />
+						</SwiperSlide>
+					</Zoom>
+					<SwiperSlide>
+						<Zoom>
 							<img
-								src='https://img.freepik.com/premium-vector/bookstore-shop-exterior-woman_169241-6676.jpg'
-								alt='img'
+								alt='That Wanaka Tree, New Zealand by Laura Smetsers'
+								src='https://swiperjs.com/demos/images/nature-6.jpg'
+								width='500'
 							/>
-						</a>
-						<div class='card__head'>BooK Shop</div>
-					</div>
-					<div class='card'>
-						<a
-							target='_blank'
-							href='https://movie-kk8n-git-master-aziret055s-projects.vercel.app/'
-						>
-							<img
-								src='https://image.tmdb.org/t/p/original/uxzzxijgPIY7slzFvMotPv8wjKA.jpg'
-								alt='img'
+						</Zoom>
+					</SwiperSlide>
+					<SwiperSlide>
+						<Zoom>
+							<div
+								aria-label='That Wanaka Tree, New Zealand by Laura Smetsers'
+								role='img'
+								style={{
+									backgroundColor: '#fff',
+									backgroundImage: `url("/path/to/thatwanakatree.jpg")`,
+									backgroundPosition: '50%',
+									backgroundRepeat: 'no-repeat',
+									backgroundSize: 'cover',
+									height: '0',
+									paddingBottom: '56%',
+									width: '100%'
+								}}
 							/>
-						</a>
-						<div class='card__head'>TMDB Movie</div>
-					</div>
-					<div class='card'>
-						<a target='_blank' href='https://rad-kataifi-5b9398.netlify.app/'>
-							<img
-								src='https://www.health.com/thmb/2VrgRdGpx-CwytNS1LxotOv6bhE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/hlt-led-teeth-whitening-kits-test-crest-emulsion-light-tstaples-1398-9441e08241c441379207f8251d38ccb7.jpeg'
-								alt='img'
-							/>
-						</a>
-						<div class='card__head'>Teeth Product</div>
-					</div>
-					{/* <div class='card'>
-						<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Al_acecho_%289272124788%29.jpg/1280px-Al_acecho_%289272124788%29.jpg' />
-						<div class='card__head'>Prowling Cat</div>
-					</div>
-					<div class='card'>
-						<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Mimi%26Tigsi.jpg/1280px-Mimi%26Tigsi.jpg' />
-						<div class='card__head'>Sleepy Cat</div>
-					</div> */}
-				</div>
+						</Zoom>
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src='https://swiperjs.com/demos/images/nature-7.jpg' />
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src='https://swiperjs.com/demos/images/nature-8.jpg' />
+					</SwiperSlide>
+					<SwiperSlide>
+						<img src='https://swiperjs.com/demos/images/nature-9.jpg' />
+					</SwiperSlide>
+				</Swiper>
 			</div>
-		</div>
+		</>
 	)
 }
-
-export default Portfolio
