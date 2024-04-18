@@ -7,6 +7,7 @@ import 'slick-carousel/slick/slick.css'
 import './App.css'
 import About from './components/About'
 import Blocks from './components/Blocks'
+import Footer from './components/Footer'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import Portfolio from './components/Portfolio/Portfolio'
@@ -24,7 +25,7 @@ function App() {
 			<About />
 			<Reviews />
 			<Resume />
-			{/* <Footer /> */}
+			<Footer />
 			<ToastContainer />
 		</div>
 	)
