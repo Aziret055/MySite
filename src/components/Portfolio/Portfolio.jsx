@@ -17,6 +17,7 @@ export default function Portfolio() {
 		<>
 			<div id='portfolio' className='py-[90px]'>
 				<div className='bodyBody'>
+					<h1 className='text-center text-4xl font-bold py-7 '>PortFolio</h1>
 					<Swiper
 						effect={'coverflow'}
 						grabCursor={true}

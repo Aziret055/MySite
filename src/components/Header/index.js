@@ -1,8 +1,7 @@
-import Logout from '@mui/icons-material/Logout'
+import { AccountCircle } from '@mui/icons-material'
+import { Divider } from '@mui/material'
 import Box from '@mui/material/Box'
-import Divider from '@mui/material/Divider'
 import IconButton from '@mui/material/IconButton'
-import ListItemIcon from '@mui/material/ListItemIcon'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import Tooltip from '@mui/material/Tooltip'
@@ -57,6 +56,22 @@ const Header = () => {
 			duration: 2
 		})
 	}
+	//! sign in and sign up here
+	const [authAvatar, setAuthAvatar] = React.useState(true)
+	const [anchorElAvatar, setAnchorElAvatar] = React.useState(null)
+
+	const handleChangeAvatar = event => {
+		setAuthAvatar(event.target.checked)
+	}
+
+	const handleMenuAvatar = event => {
+		setAnchorElAvatar(event.currentTarget)
+	}
+
+	const handleCloseAvatar = () => {
+		setAnchorElAvatar(null)
+	}
+	//! sign in and sign up here
 
 	return (
 		<div id='header'>
@@ -64,7 +79,7 @@ const Header = () => {
 				<nav className='back bg-none dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600'>
 					<div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
 						<a
-							href=''
+							onClick={toHome}
 							className='flex items-center space-x-3 rtl:space-x-reverse'
 						>
 							<img src={image} className='h-8 rounded-full' alt='img' />
@@ -94,7 +109,7 @@ const Header = () => {
 												onClick={() => setMenu(!menu)}
 												// data-collapse-toggle='navbar-sticky'
 												type='button'
-												className='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
+												className='md:hidden'
 												aria-controls='navbar-sticky'
 												aria-expanded='false'
 											>
@@ -117,6 +132,38 @@ const Header = () => {
 										</IconButton>
 									</Tooltip>
 								</Box>
+								{/* sign in and sing up here  */}
+								<div>
+									<IconButton
+										size='large'
+										aria-label='account of current user'
+										aria-controls='menu-appbar'
+										aria-haspopup='true'
+										onClick={handleMenuAvatar}
+										color='inherit'
+									>
+										<AccountCircle />
+									</IconButton>
+									<Menu
+										id='menu-appbar'
+										anchorEl={anchorElAvatar}
+										anchorOrigin={{
+											vertical: 'top',
+											horizontal: 'right'
+										}}
+										keepMounted
+										transformOrigin={{
+											vertical: 'top',
+											horizontal: 'right'
+										}}
+										open={Boolean(anchorElAvatar)}
+										onClose={handleCloseAvatar}
+									>
+										<MenuItem onClick={handleCloseAvatar}>Profile</MenuItem>
+										<MenuItem onClick={handleCloseAvatar}>My account</MenuItem>
+									</Menu>
+								</div>
+								{/* sign in and sing up here  */}
 								<Menu
 									className=''
 									anchorEl={anchorEl}
@@ -155,38 +202,54 @@ const Header = () => {
 								>
 									<MenuItem
 										className='w-[600px] h-[150px]'
-										onClick={handleClose}
+										onClick={() => {
+											handleClose()
+											toHome()
+										}}
 									>
 										Home
 									</MenuItem>
-									<MenuItem className='h-[100px]' onClick={() => {
-										handleClose()
-										aboutMy()
-									}}>
+									<MenuItem
+										className='h-[100px]'
+										onClick={() => {
+											handleClose()
+											aboutMy()
+										}}
+									>
 										About me
 									</MenuItem>
 									<Divider />
-									<MenuItem className='h-[100px]' onClick={() => {
-										handleClose()
-										toReview()
-									}}>
+									<MenuItem
+										className='h-[100px]'
+										onClick={() => {
+											handleClose()
+											toReview()
+										}}
+									>
 										Reviews
 									</MenuItem>
-									<MenuItem className='h-[100px]' onClick={() => {
-										handleClose()
-										toContact()
-									}}>
+									<MenuItem
+										className='h-[100px]'
+										onClick={() => {
+											handleClose()
+											toContact()
+										}}
+									>
 										Contact
 									</MenuItem>
-									<MenuItem className='h-[100px]' onClick={handleClose}>
-										<ListItemIcon>
-											<Logout fontSize='small' />
-										</ListItemIcon>
-										Logout
+									<MenuItem
+										className='h-[100px]'
+										onClick={() => {
+											handleClose()
+											toResume()
+										}}
+									>
+										Resume
 									</MenuItem>
 								</Menu>
 							</React.Fragment>
 						</div>
+						{/* drop down here  */}
 						<div
 							className='items-center justify-between hidden w-full md:flex md:w-auto md:order-1'
 							id='navbar-sticky'
@@ -219,6 +282,7 @@ const Header = () => {
 								</a>
 							</ul>
 						</div>
+						{/* drop down here  */}
 					</div>
 				</nav>
 			</div>
