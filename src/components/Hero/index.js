@@ -57,7 +57,7 @@ const Hero = () => {
 									alt='img'
 								/>
 								<img
-									className='heroTOP absolute top-0 left-[-30px] w-[80px]'
+									className='heroTOP heroTop2  absolute top-0 left-[-30px] w-[80px]'
 									src={one}
 									alt='img'
 								/>
@@ -72,7 +72,7 @@ const Hero = () => {
 									alt='img'
 								/>
 								<img
-									className='heroTOP absolute top-0 right-[-30px] w-20'
+									className='heroTOP heroTop3 absolute top-0 right-[-30px] w-20'
 									src={four}
 									alt='img'
 								/>

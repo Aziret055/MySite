@@ -67,7 +67,7 @@
 		border: 50px solid var(--blu, #00c4f0);
 	}
 	.heroImg {
-		height: 200px;
+		height: 222px;
 	}
 	.heroTOP {
 		top: -60px;
@@ -80,5 +80,37 @@
 	.heroUX {
 		top: 92px;
 		width: 60px;
+	}
+}
+@media (max-width: 436px) {
+	.heroUX {
+		left: -69px;
+	}
+	.heroTop2 {
+		left: 13px;
+	}
+
+	.heroTop3 {
+		right: 15px;
+	}
+	.heroPs {
+		left: 2px;
+	}
+}
+@media (max-width: 352px) {
+	.dott {
+		width: 285px;
+		height: 285px;
+		border: 40px solid var(--blu, #00c4f0);
+	}
+	.heroUX {
+		left: -63px;
+	}
+	.heroImg {
+		height: 205px;
+	}
+	.heroPs {
+		top: 199px;
+		left: 17px;
 	}
 }
