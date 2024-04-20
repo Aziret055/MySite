@@ -12,6 +12,7 @@ import SignUp from './components/auth/SignUp'
 gsap.registerPlugin(ScrollToPlugin)
 
 function App() {
+	console.log('hello world')
 	return (
 		<div className='App'>
 			<Header />
