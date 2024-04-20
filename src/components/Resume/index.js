@@ -14,16 +14,24 @@ const Resume = () => {
 	const [messages, setMessages] = useState('')
 	function addProduct(e) {
 		e.preventDefault()
-		let message = `<b> Заявка моего сайта Азирет!</b>\n`
-		message += ` <b> Name: </b> ${name}\n`
-		message += ` <b> Email: </b> ${email}\n`
-		message += ` <b> Phone: </b> ${phone}\n`
-		message += ` <b> Message: </b> ${messages}\n`
-		axios.post(URI_API, {
-			chat_id: CHAT_ID,
-			parse_mode: 'html',
-			text: message
-		})
+		if (phone === '' || email === '' || messages === '' || name === '') {
+			alert('Заполните пустое поле')
+		} else {
+			let message = `<b> Заявка моего сайта Азирет!</b>\n`
+			message += ` <b> Name: </b> ${name}\n`
+			message += ` <b> Email: </b> ${email}\n`
+			message += ` <b> Phone: </b> ${phone}\n`
+			message += ` <b> Message: </b> ${messages}\n`
+			axios.post(URI_API, {
+				chat_id: CHAT_ID,
+				parse_mode: 'html',
+				text: message
+			})
+		}
+		setPhone('')
+		setEmail('')
+		setName('')
+		setMessages('')
 	}
 
 	const [open, setOpen] = React.useState(false)
