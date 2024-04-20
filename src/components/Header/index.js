@@ -7,11 +7,15 @@ import MenuItem from '@mui/material/MenuItem'
 import Tooltip from '@mui/material/Tooltip'
 import gsap from 'gsap'
 import React, { useState } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import image from '../../img/Снимок экрана от 2024-01-11 14-51-37.png'
 import './header.css'
 const Header = () => {
+	const nav = useNavigate()
 	const [menu, setMenu] = useState(false)
 	const [anchorEl, setAnchorEl] = React.useState(null)
+
+	const { pathname } = useLocation()
 	const open = Boolean(anchorEl)
 	const handleClick = event => {
 		setAnchorEl(event.currentTarget)
@@ -78,7 +82,8 @@ const Header = () => {
 			<div className='container'>
 				<nav className='back bg-none dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600'>
 					<div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
-						<a
+						<Link
+							to={'/'}
 							onClick={toHome}
 							className='flex items-center space-x-3 rtl:space-x-reverse'
 						>
@@ -86,7 +91,7 @@ const Header = () => {
 							<span className='self-center text-xl font-semibold whitespace-nowrap text-white'>
 								MotionWeb
 							</span>
-						</a>
+						</Link>
 						<div className='flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse'>
 							<React.Fragment>
 								<Box
@@ -159,8 +164,15 @@ const Header = () => {
 										open={Boolean(anchorElAvatar)}
 										onClose={handleCloseAvatar}
 									>
-										<MenuItem onClick={handleCloseAvatar}>Profile</MenuItem>
-										<MenuItem onClick={handleCloseAvatar}>My account</MenuItem>
+										<MenuItem onClick={handleCloseAvatar}>Sign in</MenuItem>
+										<MenuItem
+											onClick={() => {
+												handleCloseAvatar()
+												nav('/signUp')
+											}}
+										>
+											Sigin up
+										</MenuItem>
 									</Menu>
 								</div>
 								{/* sign in and sing up here  */}
@@ -250,38 +262,41 @@ const Header = () => {
 							</React.Fragment>
 						</div>
 						{/* drop down here  */}
-						<div
-							className='items-center justify-between hidden w-full md:flex md:w-auto md:order-1'
-							id='navbar-sticky'
-						>
-							<ul className='flex flex-col p-4 md:p-0 mt-4 font-bold border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 '>
-								<a
-									onClick={toHome}
-									className='block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent  md:p-0  dark:text-white md:dark:hover:bg-transparen'
-									aria-current='page'
-								>
-									Home
-								</a>
-								<a
-									onClick={aboutMy}
-									className='block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent  md:p-0  dark:text-white md:dark:hover:bg-transparent'
-								>
-									About me
-								</a>
-								<a
-									onClick={toReview}
-									className='block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent  md:p-0  dark:text-white md:dark:hover:bg-transparen'
-								>
-									Reviews
-								</a>
-								<a
-									onClick={toContact}
-									className='block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent  md:p-0  dark:text-white md:dark:hover:bg-transparen'
-								>
-									Contact
-								</a>
-							</ul>
-						</div>
+						{pathname === '/' && (
+							<div
+								className='items-center justify-between hidden w-full md:flex md:w-auto md:order-1'
+								id='navbar-sticky'
+							>
+								<ul className='flex flex-col p-4 md:p-0 mt-4 font-bold border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 '>
+									<a
+										onClick={toHome}
+										className='block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent  md:p-0  dark:text-white md:dark:hover:bg-transparen'
+										aria-current='page'
+									>
+										Home
+									</a>
+									<a
+										onClick={aboutMy}
+										className='block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent  md:p-0  dark:text-white md:dark:hover:bg-transparent'
+									>
+										About me
+									</a>
+									<a
+										onClick={toReview}
+										className='block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent  md:p-0  dark:text-white md:dark:hover:bg-transparen'
+									>
+										Reviews
+									</a>
+									<a
+										onClick={toContact}
+										className='block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent  md:p-0  dark:text-white md:dark:hover:bg-transparen'
+									>
+										Contact
+									</a>
+								</ul>
+							</div>
+						)}
+
 						{/* drop down here  */}
 					</div>
 				</nav>
