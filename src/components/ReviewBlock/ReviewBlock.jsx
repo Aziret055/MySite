@@ -27,7 +27,7 @@ const ReviewBlock = ({ el, index }) => {
 	}
 
 	return (
-		<div id='review'>
+		<div id=''>
 			<div className=''>
 				<div className='cc flex items-start justify-start gap-8'>
 					<Avatar alt='Travis Howard' src='/static/images/avatar/2.jpg' />
@@ -35,7 +35,7 @@ const ReviewBlock = ({ el, index }) => {
 						<h1 className=''>kojomberdiev</h1>
 						<li
 							key={index}
-							className='flex justify-between items-center p-2  w-full px-4  border-b'
+							className='listReview flex justify-between items-center p-2  w-full px-4  border-b'
 						>
 							<span>{el.title}</span>
 

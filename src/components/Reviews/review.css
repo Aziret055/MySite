@@ -419,9 +419,12 @@
 	color: rgb(59, 59, 59);
 	line-height: 17px;
 }
-@media (max-width: 721px) {
+@media (max-width: 720px) {
 	#review {
 		margin-top: 470px;
+	}
+	.listReview {
+		margin-top: -450px;
 	}
 }
 @media (max-width: 483px) {
