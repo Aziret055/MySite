@@ -27,11 +27,11 @@ const Resume = () => {
 				parse_mode: 'html',
 				text: message
 			})
+			setPhone('')
+			setEmail('')
+			setName('')
+			setMessages('')
 		}
-		setPhone('')
-		setEmail('')
-		setName('')
-		setMessages('')
 	}
 
 	const [open, setOpen] = React.useState(false)
@@ -41,7 +41,11 @@ const Resume = () => {
 	return (
 		<div id='resume'>
 			<div className='container'>
-				<h1 className='resumeText text-3xl text-center my-11 font-black'>
+				<h1
+					data-aos='fade-up'
+					data-aos-duration='2000'
+					className='resumeText text-3xl text-center my-11 font-black'
+				>
 					Resume And Contact Me
 				</h1>
 				<div className='resumeRod flex items-center justify-between px-[100px] relative mb-[100px]'>
@@ -50,7 +54,11 @@ const Resume = () => {
 							<span class='title'>Contact me</span>
 							<form onSubmit={addProduct} class='form'>
 								<div className='flex items-center justify-center gap-7'>
-									<div class='group www'>
+									<div
+										data-aos='fade-up'
+										data-aos-anchor-placement='top-bottom'
+										class='group www'
+									>
 										<input
 											value={name}
 											onChange={e => setName(e.target.value)}
@@ -60,7 +68,11 @@ const Resume = () => {
 										/>
 										<label for='name'>Name</label>
 									</div>
-									<div class='group www'>
+									<div
+										data-aos='fade-up'
+										data-aos-anchor-placement='top-bottom'
+										class='group www'
+									>
 										<input
 											value={email}
 											onChange={e => setEmail(e.target.value)}
@@ -73,7 +85,11 @@ const Resume = () => {
 										<label for='email'>Email</label>
 									</div>
 								</div>
-								<div class='group'>
+								<div
+									data-aos='fade-up'
+									data-aos-anchor-placement='top-bottom'
+									class='group'
+								>
 									<input
 										value={phone}
 										onChange={e => setPhone(e.target.value)}
@@ -83,7 +99,11 @@ const Resume = () => {
 									/>
 									<label>Phone</label>
 								</div>
-								<div class='group'>
+								<div
+									data-aos='fade-up'
+									data-aos-anchor-placement='top-bottom'
+									class='group'
+								>
 									<input
 										value={messages}
 										className='h-[100px]'
@@ -96,13 +116,26 @@ const Resume = () => {
 									></input>
 									<label for='comment'>Message</label>
 								</div>
-								<button type='submit'>Submit</button>
+								<button
+									data-aos='fade-up'
+									data-aos-anchor-placement='top-bottom'
+									type='submit'
+								>
+									Submit
+								</button>
 							</form>
 						</div>
 					</div>
 					{/* ///////////////////////////////////////////////////// */}
-					<div class='aboutGroup group flex flex-col justify-start items-start gap-2 w-96 h-56 duration-500 relative rounded-lg p-4 bg-gray-900 hover:-translate-y-2 hover:shadow-xl shadow-gray-800'>
+					<div
+						data-aos='fade-up'
+						data-aos-duration='2000'
+						class='aboutGroup group flex flex-col justify-start items-start gap-2 w-96 h-56 duration-500 relative rounded-lg p-4 bg-gray-900 hover:-translate-y-2 hover:shadow-xl shadow-gray-800'
+					>
 						<div
+							data-aos='flip-left'
+							data-aos-easing='ease-out-cubic'
+							data-aos-duration='2000'
 							alt='image here'
 							class='absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 w-1/2 h-1/2 rounded-lg bg-gray-800'
 						>

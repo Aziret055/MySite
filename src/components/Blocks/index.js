@@ -13,7 +13,12 @@ const Blocks = () => {
 		<div id='block'>
 			<div className='container'>
 				<div className='bb flex flex-wrap gap-4 ml-11 mt-11'>
-					<div className='blocksBock flex items-center justify-center bg-zinc-700 h-[240px] w-[300px] mx-auto rounded-xl	 flex-col '>
+					<div
+						data-aos='flip-left'
+						data-aos-easing='ease-out-cubic'
+						data-aos-duration='1500'
+						className='blocksBock flex items-center justify-center bg-zinc-700 h-[200px] w-[250px] mx-auto rounded-xl	 flex-col '
+					>
 						<img
 							className='h-auto max-w-[270px] rounded-lg'
 							src={img1}
@@ -21,7 +26,12 @@ const Blocks = () => {
 						/>
 						<h1 className='text-white font-bold '>Product Design</h1>
 					</div>
-					<div className='blocksBock flex items-center justify-center bg-zinc-700 h-[240px] w-[300px] rounded-xl mx-auto	 flex-col gap-8'>
+					<div
+						data-aos='flip-left'
+						data-aos-easing='ease-out-cubic'
+						data-aos-duration='1200'
+						className='blocksBock flex items-center justify-center bg-zinc-700 h-[200px] w-[250px] rounded-xl mx-auto	 flex-col gap-8'
+					>
 						<img
 							className='h-auto max-w-[270px] rounded-lg'
 							src={img2}
@@ -29,7 +39,12 @@ const Blocks = () => {
 						/>
 						<h1 className='text-white font-bold'>UX/UI Design</h1>
 					</div>
-					<div className='blocksBock flex items-center justify-center bg-zinc-700  h-[240px] w-[300px] rounded-xl	mx-auto flex-col gap-8'>
+					<div
+						data-aos='flip-left'
+						data-aos-easing='ease-out-cubic'
+						data-aos-duration='2300'
+						className='blocksBock flex items-center justify-center bg-zinc-700  h-[200px] w-[250px] rounded-xl	mx-auto flex-col gap-8'
+					>
 						<img
 							className='h-auto max-w-[270px] rounded-lg'
 							src={img3}
@@ -37,7 +52,12 @@ const Blocks = () => {
 						/>
 						<h1 className='text-white font-bold'>Icon Design</h1>
 					</div>
-					<div className='blocksBock flex items-center justify-center bg-zinc-700 h-[240px] w-[300px] rounded-xl	mx-auto flex-col gap-8'>
+					<div
+						data-aos='flip-left'
+						data-aos-easing='ease-out-cubic'
+						data-aos-duration='2200'
+						className='blocksBock flex items-center justify-center bg-zinc-700 h-[200px] w-[250px] rounded-xl	mx-auto flex-col gap-8'
+					>
 						<img
 							className='h-auto max-w-[270px] rounded-lg'
 							src={img4}
@@ -45,7 +65,12 @@ const Blocks = () => {
 						/>
 						<h1 className='text-white font-bold'>Logo Design</h1>
 					</div>
-					<div className='blocksBock flex items-center justify-center bg-zinc-700 h-[240px] w-[300px] rounded-xl	mx-auto flex-col gap-8'>
+					<div
+						data-aos='flip-left'
+						data-aos-easing='ease-out-cubic'
+						data-aos-duration='1100'
+						className='blocksBock flex items-center justify-center bg-zinc-700 h-[200px] w-[250px] rounded-xl	mx-auto flex-col gap-8'
+					>
 						<img
 							className='h-auto max-w-[270px] rounded-lg'
 							src={img5}
@@ -53,7 +78,12 @@ const Blocks = () => {
 						/>
 						<h1 className='text-white font-bold'>Backend</h1>
 					</div>
-					<div className='blocksBock flex items-center justify-center bg-zinc-700 h-[240px] w-[300px] rounded-xl	mx-auto flex-col gap-8'>
+					<div
+						data-aos='flip-left'
+						data-aos-easing='ease-out-cubic'
+						data-aos-duration='2600'
+						className='blocksBock flex items-center justify-center bg-zinc-700 h-[200px] w-[250px] rounded-xl	mx-auto flex-col gap-8'
+					>
 						<img
 							className='h-auto max-w-[270px] rounded-lg'
 							src={img6}
@@ -61,7 +91,12 @@ const Blocks = () => {
 						/>
 						<h1 className='text-white font-bold'>Frontend</h1>
 					</div>
-					<div className='blocksBock flex items-center justify-center bg-zinc-700 h-[240px] w-[300px] rounded-xl	mx-auto flex-col gap-8'>
+					<div
+						data-aos='flip-left'
+						data-aos-easing='ease-out-cubic'
+						data-aos-duration='1900'
+						className='blocksBock flex items-center justify-center bg-zinc-700 h-[200px] w-[250px] rounded-xl	mx-auto flex-col gap-8'
+					>
 						<img
 							className='h-auto max-w-[270px] rounded-lg'
 							src={img7}
@@ -69,7 +104,12 @@ const Blocks = () => {
 						/>
 						<h1 className='text-white font-bold'>Motion</h1>
 					</div>
-					<div className='blocksBock flex items-center justify-center bg-zinc-700 h-[240px] w-[300px] rounded-xl	mx-auto flex-col gap-8'>
+					<div
+						data-aos='flip-left'
+						data-aos-easing='ease-out-cubic'
+						data-aos-duration='1800'
+						className='blocksBock flex items-center justify-center bg-zinc-700 h-[200px] w-[250px] rounded-xl	mx-auto flex-col gap-8'
+					>
 						<img
 							className='h-auto max-w-[270px] rounded-lg'
 							src={img8}

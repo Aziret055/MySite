@@ -27,12 +27,14 @@ const About = () => {
 					<div className='relative about-text bg-zinc-800 rounded-xl   p-6 text-center text-zinc-200 font-semibold flex items-center justify-center mx-auto'>
 						<div className='dis'>
 							<img
+								data-aos='zoom-out-up'
 								onClick={handleOpen}
 								className='aboutImgSmall andBottom w-[230px] absolute top-[-60px] left-[-225px]  bg-zinc-800 p-7 rounded-xl object-cover'
 								src={blackJacet}
 								alt='img'
 							/>
 							<img
+								data-aos='zoom-out-left'
 								onClick={handleOpen}
 								className='aboutImgSmall w-[230px] object-contain h-[300px] absolute bottom-[-60px] p-4 left-[-225px]  bg-zinc-800 rounded-xl '
 								src={sittigPhoto}

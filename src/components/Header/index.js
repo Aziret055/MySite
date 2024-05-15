@@ -33,7 +33,7 @@ const Header = () => {
 	//! log Out
 	async function logOut() {
 		try {
-				await signOut(auth)
+			await signOut(auth)
 		} catch (error) {
 			alert(error.message)
 		}

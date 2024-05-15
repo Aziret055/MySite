@@ -6,7 +6,6 @@ import greenJacket from '../../img/greenPhoto.jpg'
 import one from '../../img/one.png'
 import there from '../../img/there.png'
 import two from '../../img/two.png'
-
 const Hero = () => {
 	function contactMe() {
 		gsap.to(window, {
@@ -15,6 +14,18 @@ const Hero = () => {
 			duration: 1.3
 		})
 	}
+	// const animateText = {
+	// 	hidden: {
+	// 		x: -100,
+	// 		opacity: 0
+	// 	},
+	// 	visible: custom => ({
+	// 		x: 100,
+	// 		opacity: 1,
+	// 		transition: { delay: custom * 0.1	 }
+	// 	})
+	// }
+
 	return (
 		<div
 			id='hero'
@@ -25,14 +36,26 @@ const Hero = () => {
 			}}
 		>
 			<div className='container'>
-				<div className='heroMT hero pt-[100px]'>
-					<section className=''>
+				<div className='heroMT hero pt-[50px]'>
+					<section initial='initial' whileInView='visible' className=''>
 						<div class='heroAdap flex mt-[100px] px-11'>
-							<div class='heroTwo mr-auto place-self-center'>
-								<h1 class='max-w-2xl  text-4xl font-extrabold tracking-tight leading-none md:text-5xl text-white'>
+							<div
+								data-aos='fade-right'
+								data-aos-duration='2000'
+								class='heroTwo mr-auto place-self-center'
+							>
+								<h1
+									// variants={animateText}
+									// custom={2}
+									class='max-w-2xl  text-4xl font-extrabold tracking-tight leading-none md:text-5xl text-white'
+								>
 									Hello
 								</h1>
-								<h1 class='max-w-2xl text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white text-white'>
+								<h1
+									// variants={animateText}
+									// custom={1}
+									class='max-w-2xl text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white text-white'
+								>
 									I'm Aziret
 								</h1>
 								<p class='heroP max-w-2xl  my-5 text-white'>
@@ -50,7 +73,7 @@ const Hero = () => {
 									Contact me
 								</a>
 							</div>
-							<div class='dott flex relative'>
+							<div data-aos='fade-left' class='dott flex relative'>
 								<img
 									className='heroImg object-cover h-[460px] w-[459px] rounded-[100%] mt-[0px]'
 									src={whiteJacet}

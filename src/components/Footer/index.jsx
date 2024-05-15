@@ -55,7 +55,10 @@ const Footer = () => {
 									<div className='footerOne mb-11 w-[600px]'>
 										<div className='footerFirst flex justify-center flex-col w-[300px]'>
 											<h1 className='ml-11 text-3xl mb-11'>Contact</h1>
-											<div className='textFooter flex items-start flex-col'>
+											<div
+												data-aos='fade-right'
+												className='textFooter flex items-start flex-col'
+											>
 												<span className='flex gap-4 '>
 													<h3>phone : </h3>
 													<a>+996 703601008</a>
@@ -84,32 +87,53 @@ const Footer = () => {
 										<div className='footerTwo flex items-center gap-16 mt-[80px]'>
 											<div>
 												<ul className='text-white dark:text-gray-400 flex flex-col font-medium'>
-													<li onClick={heroFunction} className='mb-4 '>
+													<li
+														data-aos='zoom-in'
+														onClick={heroFunction}
+														className='mb-4 '
+													>
 														Home
 													</li>
-													<li onClick={func} className='mb-4'>
+													<li
+														data-aos='zoom-in'
+														onClick={func}
+														className='mb-4'
+													>
 														About me
 													</li>
-													<li onClick={portfolio} className=''>
+													<li
+														data-aos='zoom-in'
+														onClick={portfolio}
+														className=''
+													>
 														Portfolio
 													</li>
 												</ul>
 											</div>
 											<ul className='text-white dark:text-gray-400 font-medium mt-[-16px]'>
-												<li onClick={resume} className='my-4'>
+												<li
+													data-aos='zoom-in'
+													onClick={resume}
+													className='my-4'
+												>
 													Resume
 												</li>
-												<li onClick={resume} className='mb-4'>
+												<li
+													data-aos='zoom-in'
+													onClick={resume}
+													className='mb-4'
+												>
 													ContactMe
 												</li>
-												<li onClick={blockss}>Blocks</li>
+												<li data-aos='zoom-in' onClick={blockss}>
+													Blocks
+												</li>
 											</ul>
 										</div>
 									</div>
-									<div className='ifremeFooter'>
+									<div data-aos='fade-up-left' className='ifremeFooter'>
 										<iframe
 											className='ifremeFooter2'
-									
 											src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2923.1895779169395!2d74.61086921189307!3d42.88994680133996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb7ed7cb24803%3A0xe1c77d12212757b7!2zMTM4INGD0LsuINCa0YPRgNC10L3QutC10LXQstCwLCDQkdC40YjQutC10Lo!5e0!3m2!1sru!2skg!4v1713268545663!5m2!1sru!2skg'
 										></iframe>
 									</div>
@@ -118,7 +142,10 @@ const Footer = () => {
 								<hr className='hrFooter my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8' />
 								<div className='sm:flex sm:items-center sm:justify-between'>
 									<span className='text-sm text-white sm:text-center dark:text-gray-400 flex items-center justify-center gap-3'>
-										<span className='footerSpan'>Thank you for visiting my site</span> <CiFaceSmile />
+										<span className='footerSpan'>
+											Thank you for visiting my site
+										</span>{' '}
+										<CiFaceSmile />
 									</span>
 									<div className='flex items-center justify-center gap-6'>
 										<a href='https://www.instagram.com/_kojom5erd1ev_1/'>
