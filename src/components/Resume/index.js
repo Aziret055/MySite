@@ -52,6 +52,7 @@ const Resume = () => {
 								<div className='flex items-center justify-center gap-7'>
 									<div class='group www'>
 										<input
+											value={name}
 											onChange={e => setName(e.target.value)}
 											placeholder='‎'
 											type='text'
@@ -61,6 +62,7 @@ const Resume = () => {
 									</div>
 									<div class='group www'>
 										<input
+											value={email}
 											onChange={e => setEmail(e.target.value)}
 											placeholder='‎'
 											type='email'
@@ -73,6 +75,7 @@ const Resume = () => {
 								</div>
 								<div class='group'>
 									<input
+										value={phone}
 										onChange={e => setPhone(e.target.value)}
 										placeholder='‎'
 										type='text'
@@ -82,6 +85,7 @@ const Resume = () => {
 								</div>
 								<div class='group'>
 									<input
+										value={messages}
 										className='h-[100px]'
 										onChange={e => setMessages(e.target.value)}
 										placeholder='‎'

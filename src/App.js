@@ -8,6 +8,7 @@ import 'slick-carousel/slick/slick.css'
 import './App.css'
 import Header from './components/Header'
 import Home from './components/Home/Home'
+import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
 gsap.registerPlugin(ScrollToPlugin)
 
@@ -18,6 +19,7 @@ function App() {
 			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='/signUp' element={<SignUp />} />
+				<Route path='/signIn' element={<SignIn />} />
 			</Routes>
 			<ToastContainer />
 		</div>

@@ -5,6 +5,7 @@ import { Bounce, toast } from 'react-toastify'
 
 import ReviewBlock from '../ReviewBlock/ReviewBlock'
 import './review.css'
+import { addDoc, collection } from 'firebase/firestore'
 
 function Reviews() {
 	const [tasks, setTasks] = useState([])
@@ -47,7 +48,12 @@ function Reviews() {
 		}
 	}
 	console.log(tasks)
-
+	//! add to firebase
+	// async function addToFireBase() {
+	// 	const ref = collection(db, tasks)
+	// 	await addDoc(ref)
+	// }
+	//! add to firebase
 	return (
 		<div id='review'>
 			<div className='container mx-auto '>

@@ -1,22 +1,44 @@
 import { AccountCircle } from '@mui/icons-material'
-import { Divider } from '@mui/material'
+import { Avatar, Divider } from '@mui/material'
 import Box from '@mui/material/Box'
 import IconButton from '@mui/material/IconButton'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import Tooltip from '@mui/material/Tooltip'
+import { onAuthStateChanged, signOut } from 'firebase/auth'
 import gsap from 'gsap'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { auth } from '../../firebase'
 import image from '../../img/Снимок экрана от 2024-01-11 14-51-37.png'
 import './header.css'
 const Header = () => {
 	const nav = useNavigate()
 	const [menu, setMenu] = useState(false)
 	const [anchorEl, setAnchorEl] = React.useState(null)
-
 	const { pathname } = useLocation()
 	const open = Boolean(anchorEl)
+	//? chek user
+	const [user, setUser] = useState(null)
+	async function chekUser() {
+		await onAuthStateChanged(auth, user => {
+			setUser(user)
+		})
+	}
+	useEffect(() => {
+		chekUser()
+	}, [])
+	console.log(user, 'userHeader')
+	//? chek user
+	//! log Out
+	async function logOut() {
+		try {
+				await signOut(auth)
+		} catch (error) {
+			alert(error.message)
+		}
+	}
+	//! log Out
 	const handleClick = event => {
 		setAnchorEl(event.currentTarget)
 	}
@@ -44,7 +66,6 @@ const Header = () => {
 			duration: 2
 		})
 	}
-
 	function toHome() {
 		gsap.to(window, {
 			scrollTo: { y: '#hero' },
@@ -52,7 +73,6 @@ const Header = () => {
 			duration: 2
 		})
 	}
-
 	function toResume() {
 		gsap.to(window, {
 			scrollTo: { y: '#resume' },
@@ -67,16 +87,26 @@ const Header = () => {
 	const handleChangeAvatar = event => {
 		setAuthAvatar(event.target.checked)
 	}
-
 	const handleMenuAvatar = event => {
 		setAnchorElAvatar(event.currentTarget)
 	}
-
 	const handleCloseAvatar = () => {
 		setAnchorElAvatar(null)
 	}
 	//! sign in and sign up here
-
+	//? user
+	const [authUser, setAuthUser] = React.useState(true)
+	const [anchorElUser, setAnchorElUser] = React.useState(null)
+	const handleChangeUser = event => {
+		setAuthUser(event.target.checked)
+	}
+	const handleMenuUser = event => {
+		setAnchorElUser(event.currentTarget)
+	}
+	const handleCloseUser = () => {
+		setAnchorElUser(null)
+	}
+	//? user
 	return (
 		<div id='header'>
 			<div className='container'>
@@ -114,7 +144,7 @@ const Header = () => {
 												onClick={() => setMenu(!menu)}
 												// data-collapse-toggle='navbar-sticky'
 												type='button'
-												className='md:hidden'
+												className='md:hidden text-white'
 												aria-controls='navbar-sticky'
 												aria-expanded='false'
 											>
@@ -138,43 +168,90 @@ const Header = () => {
 									</Tooltip>
 								</Box>
 								{/* sign in and sing up here  */}
-								<div>
-									<IconButton
-										size='large'
-										aria-label='account of current user'
-										aria-controls='menu-appbar'
-										aria-haspopup='true'
-										onClick={handleMenuAvatar}
-										color='inherit'
-									>
-										<AccountCircle />
-									</IconButton>
-									<Menu
-										id='menu-appbar'
-										anchorEl={anchorElAvatar}
-										anchorOrigin={{
-											vertical: 'top',
-											horizontal: 'right'
-										}}
-										keepMounted
-										transformOrigin={{
-											vertical: 'top',
-											horizontal: 'right'
-										}}
-										open={Boolean(anchorElAvatar)}
-										onClose={handleCloseAvatar}
-									>
-										<MenuItem onClick={handleCloseAvatar}>Sign in</MenuItem>
-										<MenuItem
-											onClick={() => {
-												handleCloseAvatar()
-												nav('/signUp')
-											}}
+								{user ? (
+									<div>
+										<Tooltip
+											sx={{ width: '30px', height: '30px' }}
+											title={user.displayName}
 										>
-											Sigin up
-										</MenuItem>
-									</Menu>
-								</div>
+											<Avatar
+												onClick={handleMenuUser}
+												alt={user.displayName}
+												src={user.photoURL}
+											/>
+										</Tooltip>
+										<Menu
+											sx={{ m: '40px' }}
+											id='menu-appbar'
+											anchorEl={anchorElUser}
+											anchorOrigin={{
+												vertical: 'top',
+												horizontal: 'right'
+											}}
+											keepMounted
+											transformOrigin={{
+												vertical: 'bottom',
+												horizontal: 'right'
+											}}
+											open={Boolean(anchorElUser)}
+											onClose={handleCloseUser}
+										>
+											<MenuItem
+												onClick={() => {
+													logOut()
+													handleCloseUser()
+												}}
+											>
+												Log Out
+											</MenuItem>
+										</Menu>
+									</div>
+								) : (
+									<div>
+										<IconButton
+											size='large'
+											aria-label='account of current user'
+											aria-controls='menu-appbar'
+											aria-haspopup='true'
+											onClick={handleMenuAvatar}
+											color='inherit'
+										>
+											<AccountCircle className='text-white' />
+										</IconButton>
+										<Menu
+											id='menu-appbar'
+											anchorEl={anchorElAvatar}
+											anchorOrigin={{
+												vertical: 'top',
+												horizontal: 'right'
+											}}
+											keepMounted
+											transformOrigin={{
+												vertical: 'top',
+												horizontal: 'right'
+											}}
+											open={Boolean(anchorElAvatar)}
+											onClose={handleCloseAvatar}
+										>
+											<MenuItem
+												onClick={() => {
+													handleCloseAvatar()
+													nav('/signIn')
+												}}
+											>
+												Sign in
+											</MenuItem>
+											<MenuItem
+												onClick={() => {
+													handleCloseAvatar()
+													nav('/signUp')
+												}}
+											>
+												Sigin up
+											</MenuItem>
+										</Menu>
+									</div>
+								)}
 								{/* sign in and sing up here  */}
 								<Menu
 									className=''
