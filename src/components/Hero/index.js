@@ -49,28 +49,33 @@ const Hero = () => {
 									// custom={2}
 									class='max-w-2xl  text-4xl font-extrabold tracking-tight leading-none md:text-5xl text-white'
 								>
-									Hello
+									Здраствуйте я
 								</h1>
 								<h1
 									// variants={animateText}
 									// custom={1}
 									class='max-w-2xl text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white text-white'
 								>
-									I'm Aziret
+									<div class='wrapper'>
+										<svg>
+											<text x='50%' y='50%' dy='.35em' text-anchor='middle'>
+												Азирет
+											</text>
+										</svg>
+									</div>
 								</h1>
 								<p class='heroP max-w-2xl  my-5 text-white'>
-									I've been doing web design, front-end and back-end development{' '}
-									<br />
-									for a year now. Do you need a website design, site layout, or{' '}
-									<br />
-									maybe a turnkey website? Then contact me
+									Занимаюсь веб-дизайном, фронтенд-разработкой уже год. <br />{' '}
+									Если вам нужен дизайн сайта, верстка сайта или может быть сайт
+									под ключ? <br />
+									Тогда свяжитесь со мной
 								</p>
 								<a
 									onClick={contactMe}
 									href='#'
 									class='inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white border border-gray-300 rounded-lg hover:bg-gray-900 focus:ring-4 focus:ring-gray-900 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800'
 								>
-									Contact me
+									Мой Контакт
 								</a>
 							</div>
 							<div data-aos='fade-left' class='dott flex relative'>

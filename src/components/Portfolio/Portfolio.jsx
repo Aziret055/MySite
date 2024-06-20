@@ -17,7 +17,19 @@ export default function Portfolio() {
 		<>
 			<div id='portfolio' className='py-[90px]'>
 				<div className='bodyBody'>
-					<h1 className='text-center text-4xl font-bold py-7 '>PortFolio</h1>
+					<h1 className='text-center w-[350px] mx-auto text-4xl font-bold py-11 '>
+						<div class='wrapper'>
+							<span class='letter letter1'>P</span>
+							<span class='letter letter2'>O</span>
+							<span class='letter letter3'>R</span>
+							<span class='letter letter4'>T</span>
+							<span class='letter letter5'>F</span>
+							<span class='letter letter6'>O</span>
+							<span class='letter letter7'>L</span>
+							<span class='letter letter8'>I</span>
+							<span class='letter letter9'>O</span>
+						</div>
+					</h1>
 					<Swiper
 						effect={'coverflow'}
 						grabCursor={true}

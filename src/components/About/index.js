@@ -22,7 +22,12 @@ const About = () => {
 	return (
 		<div id='about'>
 			<div className='container'>
-				<h1 className='text-4xl text-center my-[1	00px] font-black'>About me</h1>
+				<h1 className='text-4xl text-center my-[1	00px] font-black'>
+					<div class='loader'>
+						<p class='text'>About Me</p>
+					</div>
+				</h1>
+
 				<div className='about flex justify-center my-32'>
 					<div className='relative about-text bg-zinc-800 rounded-xl   p-6 text-center text-zinc-200 font-semibold flex items-center justify-center mx-auto'>
 						<div className='dis'>
@@ -58,26 +63,22 @@ const About = () => {
 							</Box>
 						</Modal>
 						<p className='aboutPara'>
-							Hello again everyone! So, you <br /> already know that my name is
-							Aziret. A little <br /> about myself: student, 18 y.o., <br />{' '}
-							athlete-football player, I love <br /> creativity since childhood,
-							I live in <br />
-							Bishkek. Why programming? <br /> Everything is elementary - I like
-							it, <br /> the profession of the future, thanks to <br /> which I
-							can provide myself and fulfill <br /> my dream - travel, at the
-							moment I <br /> specialize in web design, front-end <br />{' '}
-							development, turnkeywebsites. <br /> Why should you choose me?{' '}
-							<br /> I approach each order with great <br /> responsibility and
-							love, as I want to <br /> make a name for myself, exclude <br />{' '}
-							plagiarism and negligence, fully study <br /> the project, the
-							client and its target <br /> audience, work for quality, trying to{' '}
-							<br /> make an order as quickly and <br /> uniquely as possible,
-							taking into <br /> account all the edits and wishes. <br />
-							By trusting me, you will get the <br /> maximum return for your
-							project, <br /> save your nerves and time. <br />
-							If you are interested in me , you want <br /> to know something
-							more or use my <br /> services, then I will provide all my <br />{' '}
-							contacts below.
+							Всем еще раз привет! Так что вы уже знаете, что меня зовут Азирет.
+							Немного о себе: студент, 18 лет, спортсмен-футболист, я люблю
+							творчество с детства, живу в Биш кек. Почему программирование? Всё
+							элементарно - мне нравится, профессия будущего, благодаря которые
+							я могу обеспечить сам и выполнить моя мечта - путешествие, на
+							данный момент я специализируюсь на веб-дизайне, фронтенде
+							разработка сайтов под ключ. Почему вам следует выбрать меня? К
+							каждому заказу отношусь с большим вниманием ответственность и
+							любовь, как я хочу сделать себе имя, исключить плагиат и
+							халатность, полностью изучить проект, клиент и его цель аудитории,
+							работаем на качество, стараемся сделать заказ максимально быстро и
+							максимально однозначно, принимая во внимание учитывать все правки
+							и пожелания. Доверившись мне, вы получите максимальную отдачу от
+							вашего проекта, сэкономите свои нервы и время. Если вы
+							заинтересованы во мне, вы хотите чтобы узнать что-то больше или
+							использовать мой услуги, то я предоставлю все свои контакты ниже.
 						</p>
 
 						<div className='circle'></div>

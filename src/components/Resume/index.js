@@ -44,11 +44,13 @@ const Resume = () => {
 				<h1
 					data-aos='fade-up'
 					data-aos-duration='2000'
-					className='resumeText text-3xl text-center my-11 font-black'
+					className='resumeText text-3xl text-center my-[100px] font-black'
 				>
-					Resume And Contact Me
+					<a href='#' className='btn-shine text-3xl'>
+						Resume And Contact Me
+					</a>
 				</h1>
-				<div className='resumeRod flex items-center justify-between px-[100px] relative mb-[100px]'>
+				<div className='resumeRod flex items-center justify-between px-[100px] relative pt-11 mb-[100px]'>
 					<div className=' mt-11'>
 						<div class='resumeForm card'>
 							<span class='title'>Contact me</span>

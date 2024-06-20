@@ -5,7 +5,6 @@ import { Bounce, toast } from 'react-toastify'
 
 import ReviewBlock from '../ReviewBlock/ReviewBlock'
 import './review.css'
-import { addDoc, collection } from 'firebase/firestore'
 
 function Reviews() {
 	const [tasks, setTasks] = useState([])
@@ -58,7 +57,7 @@ function Reviews() {
 		<div id='review'>
 			<div className='container mx-auto '>
 				<h1 className='text-3xl font-bold flex justify-center items-center my-11'>
-					Reviews
+					<div class='shine'>Reviews</div>
 				</h1>
 				<div className='flex space-x-2 mb-4 my-24'>
 					<input

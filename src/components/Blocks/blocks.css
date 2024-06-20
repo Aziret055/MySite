@@ -6,7 +6,33 @@
 	background: #2a2a2a;
 	box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.47);
 }
+.button {
+	font-size: 2em;
+	padding: 40px 20px;
+	background-color: transparent;
+	transition: all 0.2s ease-out;
+	border: none;
+}
 
+.button__span {
+	color: #13131393;
+	transition: all 0.2s ease-out;
+	letter-spacing: 0.15em;
+	text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474,
+		-3px 6px 1px #787777b6, -4px 8px 1px #7b7a7a84, -5px 10px 1px #7f7d7d,
+		-6px 12px 1px #8281814c, -7px 14px 1px #86858564, -8px 16px 1px #8b8a89,
+		-9px 18px 1px #8f8e8d99, -10px 20px 1px #9493929b, -11px 22px 1px #999897,
+		-12px 24px 1px #9e9c9c83, -13px 26px 1px #a3a1a158, -14px 28px 1px #a8a6a6,
+		-15px 30px 1px #adabab6f, -16px 32px 1px #b2b1b077, -17px 34px 1px #b7b6b5,
+		-18px 36px 1px #bcbbba6c, -19px 38px 1px #c1bfbf78, -20px 40px 1px #c6c4c4,
+		-21px 42px 1px #cbc9c87e, -22px 44px 1px #cfcdcd62, -23px 46px 1px #d4d2d1,
+		-24px 48px 1px #d8d6d570, -25px 50px 1px #dbdad963, -26px 52px 1px #dfdddc,
+		-27px 54px 1px #e2e0df6f, -28px 56px 1px #e4e3e256;
+}
+
+.button:active .button__span {
+	text-shadow: none;
+}
 @media (max-width: 824px) {
 	.blocksBock {
 		width: 194px;
