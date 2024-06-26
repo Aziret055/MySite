@@ -24,7 +24,7 @@ const About = () => {
 			<div className='container'>
 				<h1 className='text-4xl text-center my-[1	00px] font-black'>
 					<div class='loader'>
-						<p class='text'>About Me</p>
+						<p class='text'>Обо мне</p>
 					</div>
 				</h1>
 

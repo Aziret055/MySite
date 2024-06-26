@@ -54,17 +54,17 @@ const Footer = () => {
 								<div className='footerCol flex justify-between gap-[40px] '>
 									<div className='footerOne mb-11 w-[600px]'>
 										<div className='footerFirst flex justify-center flex-col w-[300px]'>
-											<h1 className='ml-11 text-3xl mb-11'>Contact</h1>
+											<h1 className='ml-11 text-3xl mb-11'>Контакт</h1>
 											<div
 												data-aos='fade-right'
 												className='textFooter flex items-start flex-col'
 											>
 												<span className='flex gap-4 '>
-													<h3>phone : </h3>
+													<h3>номер : </h3>
 													<a>+996 703601008</a>
 												</span>
 												<span className='flex gap-4 my-2'>
-													<h3>email : </h3>
+													<h3>емайл : </h3>
 													<a
 														target='_blank'
 														href='https://mail.google.com/mail/u/0/#inbox'
@@ -73,7 +73,7 @@ const Footer = () => {
 													</a>
 												</span>
 												<span className='flex gap-4'>
-													<h3>address : </h3>
+													<h3>адрес : </h3>
 													<a
 														target='_blank'
 														href='https://www.google.com/maps/place/138+%D1%83%D0%BB.+%D0%9A%D1%83%D1%80%D0%B5%D0%BD%D0%BA%D0%B5%D0%B5%D0%B2%D0%B0,+%D0%91%D0%B8%D1%88%D0%BA%D0%B5%D0%BA/@42.8899468,74.6108692,17z/data=!3m1!4b1!4m5!3m4!1s0x389eb7ed7cb24803:0xe1c77d12212757b7!8m2!3d42.8899429!4d74.6134495?entry=ttu'
@@ -143,9 +143,11 @@ const Footer = () => {
 								<div className='sm:flex sm:items-center sm:justify-between'>
 									<span className='text-sm text-white sm:text-center dark:text-gray-400 flex items-center justify-center gap-3'>
 										<span className='footerSpan'>
-											Thank you for visiting my site
+											Благодарю Вас за посещение моего сайта
 										</span>{' '}
-										<CiFaceSmile />
+										<h2 className='text-4xl'>
+											<CiFaceSmile />
+										</h2>
 									</span>
 									<div className='flex items-center justify-center gap-6'>
 										<a href='https://www.instagram.com/_kojom5erd1ev_1/'>

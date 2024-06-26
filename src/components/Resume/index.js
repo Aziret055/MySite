@@ -47,13 +47,13 @@ const Resume = () => {
 					className='resumeText text-3xl text-center my-[100px] font-black'
 				>
 					<a href='#' className='btn-shine text-3xl'>
-						Resume And Contact Me
+						Возобновите работу и свяжитесь со мной
 					</a>
 				</h1>
 				<div className='resumeRod flex items-center justify-between px-[100px] relative pt-11 mb-[100px]'>
 					<div className=' mt-11'>
 						<div class='resumeForm card'>
-							<span class='title'>Contact me</span>
+							<span class='title'>Свяжитесь со мной</span>
 							<form onSubmit={addProduct} class='form'>
 								<div className='flex items-center justify-center gap-7'>
 									<div
@@ -68,7 +68,7 @@ const Resume = () => {
 											type='text'
 											required=''
 										/>
-										<label for='name'>Name</label>
+										<label for='name'>Имя</label>
 									</div>
 									<div
 										data-aos='fade-up'
@@ -84,7 +84,7 @@ const Resume = () => {
 											name='email'
 											required=''
 										/>
-										<label for='email'>Email</label>
+										<label for='email'>Eмайл</label>
 									</div>
 								</div>
 								<div
@@ -99,7 +99,7 @@ const Resume = () => {
 										type='text'
 										required=''
 									/>
-									<label>Phone</label>
+									<label>Номер</label>
 								</div>
 								<div
 									data-aos='fade-up'
@@ -116,7 +116,7 @@ const Resume = () => {
 										rows='5'
 										required=''
 									></input>
-									<label for='comment'>Message</label>
+									<label for='comment'>Сообщение</label>
 								</div>
 								<button
 									data-aos='fade-up'
@@ -152,17 +152,21 @@ const Resume = () => {
 						</div>
 
 						<div class=''>
-							<h2 class='text-2xl font-bold mb-2 text-gray-100'> MY RESUME </h2>
+							<h2 class='text-2xl font-bold mb-2 text-gray-100'>
+								{' '}
+								Мой резюме{' '}
+							</h2>
 							<p class='text-gray-200 line-clamp-3'>
-								hello again, it’s me and my resume, here it’s written about me
-								and my skills where I taught, look at my resume and appreciate
+								еще раз здравствуйте, это я и мое резюме, здесь написано обо мне
+								и мои навыки там, где я преподавал, посмотрите мое резюме и
+								оцените
 							</p>
 						</div>
 						<button
 							onClick={handleOpen}
 							class='hover:bg-gray-700 bg-gray-800 text-gray-100 mt-6 rounded p-2 px-6'
 						>
-							Look
+							Чекай
 						</button>
 						{/* <Modal
 							open={open}
